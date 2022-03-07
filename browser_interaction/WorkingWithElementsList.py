@@ -5,14 +5,14 @@ import time
 class WorkingWithElementsList():
 
     def testListOfElements(self):
-        baseUrl = "https://letskodeit.teachable.com/pages/practice"
+        baseUrl = ""
         driver = webdriver.Firefox()
         driver.maximize_window()
         driver.get(baseUrl)
         driver.implicitly_wait(10)
 
         radioButtonsList = driver.find_elements(
-            By.XPATH, "//input[contains(@type,'radio') and contains(@name,'cars')]")
+            By.XPATH, "")
         size = len(radioButtonsList)
         print("Size of the list: " + str(size))
 
