@@ -3,8 +3,8 @@ import time
 
 class HiddenElements():
 
-    def testLetsKodeIt(self):
-        baseUrl = "https://letskodeit.teachable.com/pages/practice"
+    def testHidden(self):
+        baseUrl = ""
         driver = webdriver.Firefox()
         driver.maximize_window()
         driver.get(baseUrl)
@@ -12,14 +12,14 @@ class HiddenElements():
 
 
         # Find the state of the text box
-        textBoxElement = driver.find_element_by_id("displayed-text")
+        textBoxElement = driver.find_element_by_id("")
         textBoxState = textBoxElement.is_displayed() # True if visible, False if hidden
         # Exception if not present in the DOM
         print("Text is visible? " + str(textBoxState))
         time.sleep(2)
 
         # Click the Hide button
-        driver.find_element_by_id("hide-textbox").click()
+        driver.find_element_by_id("").click()
         # Find the state of the text box
         textBoxState = textBoxElement.is_displayed()
         print("Text is visible? " + str(textBoxState))
@@ -29,7 +29,7 @@ class HiddenElements():
 	# You will learn about scrolling in future lecture
         driver.execute_script("window.scrollBy(0, -150);")
         # Click the Show button
-        driver.find_element_by_id("show-textbox").click()
+        driver.find_element_by_id("").click()
         # Find the state of the text box
         textBoxState = textBoxElement.is_displayed()
         print("Text is visible? " + str(textBoxState))
@@ -51,5 +51,5 @@ class HiddenElements():
 
 
 ff = HiddenElements()
-ff.testLetsKodeIt()
+ff.testHidden()
 ff.testExpedia()
