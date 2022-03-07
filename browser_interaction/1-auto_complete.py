@@ -2,22 +2,22 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-baseUrl = "http://www.goibibo.com"
+baseUrl = ""
 driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get(baseUrl)
 driver.implicitly_wait(3)
-partialText = "Del"
-textToSelect = "Delhi, India(DEL)"
+partialText = ""
+textToSelect = ""
 
-textElement = driver.find_element(By.ID, "gosuggest_inputSrc")
+textElement = driver.find_element(By.ID, "")
 textElement.send_keys(partialText)
 
-ulElement = driver.find_element(By.ID, "react-autosuggest-1")
-inner_html = ulElement.get_attribute("innerHTML")
+ulElement = driver.find_element(By.ID, "")
+inner_html = ulElement.get_attribute("")
 # print(inner_html)
 
-liElements = ulElement.find_elements(By.TAG_NAME, "li")
+liElements = ulElement.find_elements(By.TAG_NAME, "")
 time.sleep(2)
 
 for element in liElements:
