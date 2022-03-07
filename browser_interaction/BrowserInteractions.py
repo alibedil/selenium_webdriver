@@ -3,7 +3,7 @@ from selenium import webdriver
 class BrowserInteractions():
 
     def test(self):
-        baseUrl = "https://letskodeit.teachable.com/pages/practice"
+        baseUrl = ""
         driver = webdriver.Firefox()
 
         # Window Maximize
@@ -22,7 +22,7 @@ class BrowserInteractions():
         driver.get(driver.current_url)
         print("Browser Refreshed 2nd time")
         # Open another Url
-        driver.get("https://sso.teachable.com/secure/42299/users/sign_in?reset_purchase_session=1")
+        driver.get("")
         currentUrl = driver.current_url
         print("Current Url of the web page is: " + currentUrl)
         # Browser Back
